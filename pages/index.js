@@ -52,7 +52,7 @@ export default function Home() {
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
       {data.showCursor && <Cursor />}
       <Head>
-        <title>{data.name}</title>
+        <title>Regolith Classes</title>
       </Head>
 
       <div className="gradient-circle"></div>
@@ -69,7 +69,7 @@ export default function Home() {
               ref={textOne}
               className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
             >
-              {data.headerTaglineOne}
+              Hello 👋
             </h1>
             <h1
               ref={textTwo}
@@ -77,18 +77,9 @@ export default function Home() {
             >
               {data.headerTaglineTwo}
             </h1>
-            <h1
-              ref={textThree}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineThree}
-            </h1>
-            <h1
-              ref={textFour}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineFour}
-            </h1>
+                <h1 className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5">
+                Welcome in Regolith Classes
+                </h1>
           </div>
 
           <Socials className="mt-2 laptop:mt-5" />
@@ -109,18 +100,6 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
-          <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
-            {data.services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                name={service.title}
-                description={service.description}
-              />
-            ))}
-          </div>
-        </div>
         {/* This button should not go into production */}
         {process.env.NODE_ENV === "development" && (
           <div className="fixed bottom-5 right-5">
